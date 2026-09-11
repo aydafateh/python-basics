@@ -1,0 +1,5 @@
+text = input("Enter the text :")
+number_times_a = text.count("a")
+number_times_e = text.count("e")
+number_times_i = text.count("i")
+print(number_times_a , number_times_e , number_times_i )
