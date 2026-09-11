@@ -12,17 +12,12 @@ def clear():
 
 def validate_password(password):
     if len(password) != 8:
-        return False , f"Error: password must be exactly 8 characters (got {len(password)})"
-    charector = False
-    for char in ("@","#"):
-        if char in password:
-            charector = True
-            break
-    if not charector:
+        return False, f"Error: password must be exactly 8 characters (got {len(password)})"
+    if not any(char in password for char in ("@", "#")):
         return False, "Error: Password must contain @ or #"
     if not password.isascii():
         return False, "Password must be ASCII characters only"
-    return True
+    return True, ""
 
 
 def validate_username(username):
@@ -74,11 +69,11 @@ def get_username():
 
 def get_password():
     while True:
-        password = input("Enter password (@,#,digits,letters, length 8): ")
-        password = password.strip()
-        if validate_password(password):
+        password = input("Enter password (@,#,digits,letters, length 8): ").strip()
+        valid, message = validate_password(password)
+        if valid:
             return password
-        print("Error:invalid password")
+        print(message)
         
     
 def get_fullname():

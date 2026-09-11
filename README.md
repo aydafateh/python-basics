@@ -22,16 +22,13 @@ The goal of this repository is to build a strong foundation in Python through co
 ## 🗂️ Structure
 
 ```text
-01-syntax-and-variables/
-02-input-and-output/
-03-conditions/
-04-loops/
-05-functions/
-06-lists-and-tuples/
-07-dictionaries-and-sets/
-08-strings/
-09-files/
-10-mini-projects/
+01-conditions/
+02-loops/
+03-functions/
+04-lists-and-tuples/
+05-dictionaries-and-sets/
+06-strings/
+07-files/
 ```
 
 ## 🚀 Projects

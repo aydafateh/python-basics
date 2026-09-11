@@ -4,7 +4,7 @@ Irancel =("930","931","932","933","934","935","936","937","938","939",
 Rightel = ("920","921","922","923")
 
 number_phone = input("Enter your phone number:")
-if number_phone.isdigit:
+if number_phone.isdigit():
     if len(number_phone) == 11 or len(number_phone) == 13 or len(number_phone) == 12:
         if number_phone.startswith("0"):
             number_phone = number_phone.replace("0","",1)
